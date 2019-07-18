@@ -1,0 +1,32 @@
+{
+  "user1": {
+    "uid": "20UGG1WmdphLz5BD2HzdS5jChu22",
+    "name": "Emily DeWitt",
+    "location": "Nashville, Tennessee",
+    "image": "https://pbs.twimg.com/profile_images/193734214/twit.jpg"
+  },
+  "user2": {
+    "uid": "12345",
+    "name": "Bill Gates",
+    "location": "San Francisco, California",
+    "image": "https://pbs.twimg.com/profile_images/988775660163252226/XpgonN0X_400x400.jpg"
+  },
+  "user3": {
+    "uid": "65748",
+    "name": "Beyonce Knowles",
+    "location": "Los Angeles, California",
+    "image": "https://assets.capitalfm.com/2015/42/beyonce-tidal-x-1020----1445416434-editorial-long-form-0.jpg"
+  },
+  "user4": {
+    "uid": "90897",
+    "name": "Willie Nelson",
+    "location": "Austin, Texas",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Willie_Nelson_at_Farm_Aid_2009_-_Cropped.jpg/220px-Willie_Nelson_at_Farm_Aid_2009_-_Cropped.jpg"
+  },
+  "user5": {
+    "uid": "39393",
+    "name": "Justin Bieber",
+    "location": "Chicago, Illinois",
+    "image": "https://www.billboard.com/files/media/Justin-Bieber-press-photo-cr-SB-Projects-2017-billboard-1548.jpg"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "activity01": {
+    "id": "1",
+    "name": "Brought reusable mug to coffee shop",
+    "category": "Food and Drink",
+    "points": 2
+  },
+  "activity02": {
+    "id": "2",
+    "name": "Picked up 10 pieces of litter",
+    "category": "Community",
+    "points": 3
+  },
+  "activity03": {
+    "id": "3",
+    "name": "Rode a bike or walked instead of driving",
+    "category": "Transportation",
+    "points": 3
+  },
+  "activity04": {
+    "id": "4",
+    "name": "Used a reusable cloth instead of paper towel or napkin",
+    "category": "Household",
+    "points": 1
+  },
+  "activity05": {
+    "id": "5",
+    "name": "Washed laundry on cold instead of warm or hot",
+    "category": "Household",
+    "points": 2
+  },
+  "activity6": {
+    "id": "6",
+    "name": "Used reusable bag(s) while shopping",
+    "category": "Shopping",
+    "points": 2
+  },
+  "activity7": {
+    "id": "7",
+    "name": "One day without eating meat",
+    "category": "Food and Drink",
+    "points": 3
+  },
+  "activity8": {
+    "id": "8",
+    "name": "Turned the water off while brushing teeth",
+    "category": "Household",
+    "points": 1
+  },
+  "activity9": {
+    "id": "9",
+    "name": "Create a meal plan for the week to avoid food waste",
+    "category": "Food and Drink",
+    "points": 5
+  },
+  "activity10": {
+    "id": "10",
+    "name": "Buy an item that you intend to keep for life",
+    "category": "Shopping",
+    "points": 15
+  }
+}
