@@ -1,0 +1,62 @@
+{
+  "userActivity01": {
+    "uid": "12345",
+    "activityId": "activity01",
+    "dateTime": "2019-10-06T20:00",
+    "notes": "Brought my super cool coffee mug!"
+  },
+  "userActivity02": {
+    "uid": "23456",
+    "activityId": "activity02",
+    "dateTime": "2019-10-06T20:00",
+    "notes": "Picked up a bunch of cigarette butts"
+  },
+  "userActivity03": {
+    "uid": "20UGG1WmdphLz5BD2HzdS5jChu22",
+    "activityId": "activity03",
+    "dateTime": "2019-10-06T20:00",
+    "notes": "Rode my bike to work this morning"
+  },
+  "userActivity04": {
+    "uid": "45678",
+    "activityId": "activity04",
+    "dateTime": "2019-10-06T20:00",
+    "notes": "Use cloths to clean the kitchen instead of paper towels"
+  },
+  "userActivity05": {
+    "uid": "20UGG1WmdphLz5BD2HzdS5jChu22",
+    "activityId": "activity05",
+    "dateTime": "2019-10-06T20:00",
+    "notes": "Washed three loads on cold"
+  },
+  "userActivity6": {
+    "uid": "67891",
+    "activityId": "activity06",
+    "dateTime": "2019-10-06T20:00",
+    "notes": "Brought my bags to Kroger"
+  },
+  "userActivity7": {
+    "uid": "78901",
+    "activityId": "activity07",
+    "dateTime": "2019-10-06T20:00",
+    "notes": "Ate a salad for lunch and chickpea pasta dish for dinner"
+  },
+  "userActivity8": {
+    "uid": "20UGG1WmdphLz5BD2HzdS5jChu22",
+    "activityId": "activity08",
+    "dateTime": "2019-10-06T20:00",
+    "notes": "Easy peasy!"
+  },
+  "userActivity9": {
+    "uid": "91234",
+    "activityId": "activity09",
+    "dateTime": "2019-10-06T20:00",
+    "notes": "Found a great low animal product meal plan online!"
+  },
+  "userActivity10": {
+    "uid": "12934",
+    "activityId": "activity10",
+    "dateTime": "2019-10-06T20:00",
+    "notes": "Bought a nice set of screw drivers"
+  }
+}
