@@ -27,7 +27,7 @@ class MyNavbar extends React.Component {
   toggle() {
     this.setState({ isOpen: !this.state.isOpen });
   }
-  
+
   logMeOut = (e) => {
     e.preventDefault();
     firebase.auth().signOut();
@@ -43,7 +43,13 @@ class MyNavbar extends React.Component {
             <NavLink tag={RRNavLink} to='/home'>Home</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink tag={RRNavLink} to='/new' href="https://github.com/reactstrap/reactstrap">New Scat</NavLink>
+            <NavLink tag={RRNavLink} to='/myactivities'>My Activities</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink tag={RRNavLink} to='/allactivities'>All Activities</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink tag={RRNavLink} to='/scoreboard'>Scoreboard</NavLink>
           </NavItem>
           <NavItem>
             <NavLink onClick={this.logMeOut}>Logout</NavLink>
@@ -58,7 +64,7 @@ class MyNavbar extends React.Component {
     return (
       <div className="MyNavbar">
       <Navbar color="dark" dark expand="md">
-          <NavbarBrand href="/">Scat Surprise</NavbarBrand>
+          <NavbarBrand href="/">GreenUp</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             {buildNavbar()}
