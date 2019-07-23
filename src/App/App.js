@@ -66,16 +66,14 @@ class App extends React.Component {
           <React.Fragment>
             <MyNavbar authed={authed} />
             <div className="container">
-              <div className="row">
-                <Switch>
-                  <PublicRoute path='/auth' component={Auth} authed={authed} />
-                  <PrivateRoute path='/home' component={Home} authed={authed} />
-                  <PrivateRoute path='/myactivities' component={MyActivities} authed={authed} />
-                  <PrivateRoute path='/allactivities' component={AllActivities} authed={authed} />
-                  <PrivateRoute path='/scoreboard' component={Scoreboard} authed={authed} />
-                  <Redirect from="*" to="/auth" />
-                </Switch>
-              </div>
+              <Switch>
+                <PublicRoute path='/auth' component={Auth} authed={authed} />
+                <PrivateRoute path='/home' component={Home} authed={authed} />
+                <PrivateRoute path='/myactivities' component={MyActivities} authed={authed} />
+                <PrivateRoute path='/allactivities' component={AllActivities} authed={authed} />
+                <PrivateRoute path='/scoreboard' component={Scoreboard} authed={authed} />
+                <Redirect from="*" to="/auth" />
+              </Switch>
             </div>
           </React.Fragment>
         </BrowserRouter>

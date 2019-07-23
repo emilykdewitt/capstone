@@ -19,6 +19,20 @@ const getUserActivities = uid => new Promise((resolve, reject) => {
     .catch(err => reject(err));
 });
 
+const getAllUserActivities = () => new Promise((resolve, reject) => {
+  axios.get(`${baseUrl}/userActivities.json`)
+    .then((resp) => {
+      const allUserActivities = [];
+      if (resp.data !== null) {
+        Object.keys(resp.data).forEach((fbKey) => {
+          resp.data[fbKey].id = fbKey;
+          allUserActivities.push(resp.data[fbKey]);
+        });
+      }
+    })
+    .catch(err => reject(err));
+});
+
 const deleteUserActivity = userActivityId => axios.delete(`${baseUrl}/userActivities/${userActivityId}.json`);
 
 const getSingleUserActivity = userActivityId => axios.get(`${baseUrl}/userActivities/${userActivityId}.json`);
@@ -30,6 +44,7 @@ const putUserActivity = (newUserActivity, userActivityId) => axios.put(`${baseUr
 export default {
   getUserActivities,
   deleteUserActivity,
+  getAllUserActivities,
   getSingleUserActivity,
   postUserActivity,
   putUserActivity,

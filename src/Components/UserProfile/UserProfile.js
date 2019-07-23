@@ -2,6 +2,8 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import userShape from '../../helpers/userShape';
 
+import './UserProfile.scss';
+
 class UserProfile extends React.Component {
   static propTypes = {
     user: userShape.userProfileShape,
@@ -11,8 +13,9 @@ class UserProfile extends React.Component {
     const { user } = this.props;
     return (
       <div className="userProfile">
-        <img src={user.image} alt="face"></img>
+        <img className="user-profile-image" src={user.image} alt="face"></img>
         <h2 className="user-profile-name">{user.name}</h2>
+        <p>{user.uid}</p>
       </div>
     );
   }
