@@ -9,7 +9,7 @@ class ActivityCard extends React.Component {
   render() {
     const { activity } = this.props;
     return (
-      <div className="scatCard col-4">
+      <div className="activityCard col-4">
         <div className="card">
           <div className="card-body">
             <h5 className="card-title">{activity.name}</h5>

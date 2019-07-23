@@ -9,16 +9,14 @@ class UserActivityCard extends React.Component {
   render() {
     const { userActivity } = this.props;
     return (
-      <div className="user-activity-card">
-        <div className="card">
-          <div className="card-body">
-            <h5 className="card-title">UID: {userActivity.uid}</h5>
-            <h5 className="card-title">ActivityId: {userActivity.activityId}</h5>
-            <h5 className="card-title">Date: {userActivity.dateTime}</h5>
-            <h5 className="card-title">Notes: {userActivity.notes}</h5>
-            <button className="btn btn-info">Edit</button>
-            <button className="btn btn-danger">Delete</button>
-          </div>
+      <div className="card user-activity-card">
+        <div className="card-body">
+          <h5 className="card-title">UID: {userActivity.uid}</h5>
+          <h5 className="card-title">ActivityId: {userActivity.activityId}</h5>
+          <h5 className="card-title">Date: {userActivity.dateTime}</h5>
+          <h5 className="card-title">Notes: {userActivity.notes}</h5>
+          <button className="btn btn-info">Edit</button>
+          <button className="btn btn-danger">Delete</button>
         </div>
       </div>
     );
