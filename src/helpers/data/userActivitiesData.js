@@ -23,12 +23,11 @@ const getAllUserActivities = () => new Promise((resolve, reject) => {
   axios.get(`${baseUrl}/userActivities.json`)
     .then((resp) => {
       const allUserActivities = [];
-      if (resp.data !== null) {
-        Object.keys(resp.data).forEach((fbKey) => {
-          resp.data[fbKey].id = fbKey;
-          allUserActivities.push(resp.data[fbKey]);
-        });
-      }
+      Object.keys(resp.data).forEach((fbKey) => {
+        resp.data[fbKey].id = fbKey;
+        allUserActivities.push(resp.data[fbKey]);
+      });
+      resolve(allUserActivities);
     })
     .catch(err => reject(err));
 });
