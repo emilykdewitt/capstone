@@ -34,7 +34,6 @@ class Home extends React.Component {
     const myActivitiesLink = '/myactivities';
     const allActivitiesLink = '/allactivities';
     const scoreboardLink = '/scoreboard';
-    const editProfileLink = '/scoreboard';
 
     return (
       <div className="Home">
@@ -42,7 +41,6 @@ class Home extends React.Component {
         <Link className="btn btn-info my-activities-btn" to={myActivitiesLink}>My Activities</Link>
         <Link className="btn btn-primary all-activities-btn" to={allActivitiesLink}>All Activities</Link>
         <Link className="btn btn-warning scoreboard-btn" to={scoreboardLink}>Scoreboard</Link>
-        <Link className="btn btn-danger edit-profile-btn" to={editProfileLink}>Edit Profile</Link>
       </div>
     );
   }

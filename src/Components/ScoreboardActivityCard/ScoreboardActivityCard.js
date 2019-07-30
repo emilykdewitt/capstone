@@ -1,8 +1,11 @@
 import React from 'react';
+import Moment from 'react-moment';
 // import userActivityShape from '../../helpers/data/userActivityShape';
 
 import activitiesData from '../../helpers/data/activitiesData';
 import usersData from '../../helpers/data/usersData';
+
+import './ScoreboardActivityCard.scss';
 
 class ScoreboardActivityCard extends React.Component {
   _isMounted = false;
@@ -40,15 +43,26 @@ class ScoreboardActivityCard extends React.Component {
   }
 
   render() {
-    const { userActivity } = this.props;
+    // const { userActivity } = this.props;
     const { activity, user } = this.state;
+    const dateToFormat = this.props.userActivity.dateTime;
     return (
       <div className="card user-activity-card">
-        <div className="card-body">
-          <h5 className="card-title">User: {user.name}</h5>
-          <h5 className="card-title">Activity: {activity.name}</h5>
-          <h5 className="card-title">Date: {userActivity.dateTime}</h5>
-          <h5 className="card-title">Points: {activity.points}</h5>
+        <div className="scoreboard-card-body">
+          <div className="image-and-name-container">
+            <img className="scoreboard-user-image" src={user.image} alt={user.name} />
+            <h5 className="card-title">{user.name}</h5>
+          </div>
+          <div className="activity-and-date-container">
+            <h5 className="card-title scoreboard-activity-name">{activity.name}</h5>
+            <h5 className="card-title">Date:
+              <Moment format="M/D/YYYY">{dateToFormat}</Moment>
+            </h5>
+          </div>
+          <div className="points-and-label-container">
+            <h5 className="scoreboard-activity-points-value">{activity.points}</h5>
+            <h5 className="card-title scoreboard-activity-points-label">points</h5>
+          </div>
         </div>
       </div>
     );

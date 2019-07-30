@@ -66,9 +66,8 @@ class UserProfile extends React.Component {
     const userId = firebase.auth().currentUser.uid;
     usersData.editUsersInfo(userId, userToSave)
       .then(() => {
-        this.props.history.push('/home');
+        this.toggle();
       }).catch(err => console.error('no new user saved', err));
-    this.toggle();
   }
 
   render() {
