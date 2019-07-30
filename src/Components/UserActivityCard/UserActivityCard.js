@@ -1,4 +1,5 @@
 import React from 'react';
+import Moment from 'react-moment';
 import userActivityShape from '../../helpers/data/userActivityShape';
 
 import activitiesData from '../../helpers/data/activitiesData';
@@ -32,13 +33,15 @@ class UserActivityCard extends React.Component {
   render() {
     const { userActivity } = this.props;
     const { activity, user } = this.state;
+    const dateToFormat = this.props.userActivity.dateTime;
     return (
       <div className="card user-activity-card">
         <div className="card-body">
           <h5 className="card-title">User: {user.name}</h5>
-          <h5 className="card-title">ActivityId: {userActivity.activityId}</h5>
           <h5 className="card-title">Activity: {activity.name}</h5>
-          <h5 className="card-title">Date: {userActivity.dateTime}</h5>
+          <h5 className="card-title">Date:
+            <Moment format="M/D/YYYY">{dateToFormat}</Moment>
+          </h5>
           <h5 className="card-title">Notes: {userActivity.notes}</h5>
           <button className="btn btn-info">Edit</button>
           <button className="btn btn-danger">Delete</button>

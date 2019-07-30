@@ -1,0 +1,33 @@
+.scoreboard-card-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.scoreboard-user-image {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+}
+
+.image-and-name-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 15%
+}
+
+.activity-and-date-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.points-and-label-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
