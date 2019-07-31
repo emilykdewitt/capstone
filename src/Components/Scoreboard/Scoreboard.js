@@ -45,7 +45,7 @@ class Scoreboard extends React.Component {
     } = this.state;
     return (
       <div className="Scoreboard">
-        <h2>Scoreboard!</h2>
+        <h2>Scoreboard</h2>
         <AllUserActivities
           users={users}
           activities={activities}

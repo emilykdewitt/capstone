@@ -5,6 +5,7 @@ const userProfileShape = PropTypes.shape({
   name: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 });
 
 export default { userProfileShape };
