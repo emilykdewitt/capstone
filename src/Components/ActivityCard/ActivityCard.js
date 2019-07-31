@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import activityShape from '../../helpers/data/activityShape';
 
 class ActivityCard extends React.Component {
@@ -8,6 +10,7 @@ class ActivityCard extends React.Component {
 
   render() {
     const { activity } = this.props;
+    const addLink = `/add/${activity.id}`;
     return (
       <div className="activityCard col-4">
         <div className="card">
@@ -15,7 +18,7 @@ class ActivityCard extends React.Component {
             <h5 className="card-title">{activity.name}</h5>
             <h5 className="card-title">Category: {activity.category}</h5>
             <h5 className="card-title">Points: {activity.points}</h5>
-            <button className="btn btn-info">Select</button>
+            <Link className="btn btn-info" to={addLink}>Add Activity</Link>
           </div>
         </div>
       </div>

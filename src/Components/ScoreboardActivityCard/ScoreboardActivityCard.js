@@ -55,9 +55,7 @@ class ScoreboardActivityCard extends React.Component {
           </div>
           <div className="activity-and-date-container">
             <h5 className="card-title scoreboard-activity-name">{activity.name}</h5>
-            <h5 className="card-title">Date:
-              <Moment format="M/D/YYYY">{dateToFormat}</Moment>
-            </h5>
+            <h5 className="card-title">Date: <Moment format="M/D/YYYY">{dateToFormat}</Moment></h5>
           </div>
           <div className="points-and-label-container">
             <h5 className="scoreboard-activity-points-value">{activity.points}</h5>

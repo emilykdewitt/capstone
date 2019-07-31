@@ -7,26 +7,26 @@
   },
   "user2": {
     "uid": "12345",
-    "name": "Bill Gates",
+    "name": "Michael Clark",
     "location": "San Francisco, California",
-    "image": "https://pbs.twimg.com/profile_images/988775660163252226/XpgonN0X_400x400.jpg"
+    "image": "https://avatars3.githubusercontent.com/u/33385949?s=460&v=4"
   },
   "user3": {
     "uid": "23456",
-    "name": "Beyonce Knowles",
+    "name": "Zoe Ames",
     "location": "Los Angeles, California",
-    "image": "https://assets.capitalfm.com/2015/42/beyonce-tidal-x-1020----1445416434-editorial-long-form-0.jpg"
+    "image": "https://avatars3.githubusercontent.com/u/8093647?s=460&v=4"
   },
   "user4": {
     "uid": "34567",
-    "name": "Willie Nelson",
+    "name": "Greg Korte",
     "location": "Austin, Texas",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Willie_Nelson_at_Farm_Aid_2009_-_Cropped.jpg/220px-Willie_Nelson_at_Farm_Aid_2009_-_Cropped.jpg"
+    "image": "https://avatars1.githubusercontent.com/u/9039265?s=460&v=4"
   },
   "user5": {
     "uid": "45678",
-    "name": "Justin Bieber",
+    "name": "Jeremiah Vasquez",
     "location": "Chicago, Illinois",
-    "image": "https://www.billboard.com/files/media/Justin-Bieber-press-photo-cr-SB-Projects-2017-billboard-1548.jpg"
+    "image": "http://nashvillesoftwareschool.com/images/instructors/jeremiahVasquez.jpg"
   }
 }

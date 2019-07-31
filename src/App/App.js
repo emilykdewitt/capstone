@@ -15,6 +15,11 @@ import MyNavbar from '../Components/MyNavbar/MyNavbar';
 import MyActivities from '../Components/MyActivities/MyActivities';
 import AllActivities from '../Components/AllActivities/AllActivities';
 import Scoreboard from '../Components/Scoreboard/Scoreboard';
+import EditUserActivityCard from '../Components/EditUserActivityCard/EditUserActivityCard';
+import AddNewUserActivity from '../Components/AddNewUserActivity/AddNewUserActivity';
+import NewUser from '../Components/NewUser/NewUser';
+
+import usersData from '../helpers/data/usersData';
 
 import './App.scss';
 
@@ -41,6 +46,9 @@ const PrivateRoute = ({ component: Component, authed, ...rest }) => {
 class App extends React.Component {
   state = {
     authed: false,
+    userObj: {
+      name: '',
+    },
   }
 
   componentDidMount() {
@@ -57,6 +65,23 @@ class App extends React.Component {
     this.removeListener();
   }
 
+  getUser = () => {
+    if (this.state.authed) {
+      const firebaseId = firebase.auth().currentUser.uid;
+      usersData.getUserInfoByUserId(firebaseId)
+        .then(userObj => this.setState({ userObj }))
+        .catch(err => console.error('trouble fetching user data', err));
+    }
+  }
+
+  createUser = (saveMe) => {
+    usersData.addUserToDatabase(saveMe)
+      .then(() => {
+        this.getUser();
+      })
+      .catch();
+  }
+
   render() {
     const { authed } = this.state;
 
@@ -68,10 +93,13 @@ class App extends React.Component {
             <div className="container">
               <Switch>
                 <PublicRoute path='/auth' component={Auth} authed={authed} />
+                <Route path='/new-user' component={NewUser} authed={authed} createUser={ this.createUser }/>
                 <PrivateRoute path='/home' component={Home} authed={authed} />
                 <PrivateRoute path='/myactivities' component={MyActivities} authed={authed} />
                 <PrivateRoute path='/allactivities' component={AllActivities} authed={authed} />
                 <PrivateRoute path='/scoreboard' component={Scoreboard} authed={authed} />
+                <PrivateRoute path='/edit/:id' component={EditUserActivityCard} authed={authed} />
+                <PrivateRoute path='/add/:id' component={AddNewUserActivity} authed={authed} />
                 <Redirect from="*" to="/auth" />
               </Switch>
             </div>

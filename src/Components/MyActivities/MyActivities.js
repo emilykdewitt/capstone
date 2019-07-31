@@ -34,6 +34,7 @@ class MyActivities extends React.Component {
         key={userActivity.id}
         userActivity={userActivity}
         deleteUserActivity={this.deleteUserActivity}
+        getUserActivities={this.getUserActivities}
         />
     ));
     return (
