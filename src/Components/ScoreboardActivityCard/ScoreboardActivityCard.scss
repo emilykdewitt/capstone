@@ -35,3 +35,18 @@
   flex-wrap: wrap;
   flex-direction: column;
 }
+
+@media only screen and (max-width: 800px) {
+  .scoreboard-card-body {
+    flex-direction: column;
+  }
+  .image-and-name-container {
+    width: 50%;
+  }
+  .points-and-label-container {
+    flex-direction: row;
+  }
+  .scoreboard-activity-points-value {
+    margin-right: 5px;
+  }
+}

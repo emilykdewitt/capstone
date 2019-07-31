@@ -41,9 +41,11 @@ class Home extends React.Component {
     return (
       <div className="Home">
         <UserProfile key={user.uid} user={user} getUserInfoByUserId={this.getUserInfoByUserId}/>
-        <Link className="btn btn-info my-activities-btn" to={myActivitiesLink}>My Activities</Link>
-        <Link className="btn btn-primary all-activities-btn" to={allActivitiesLink}>All Activities</Link>
-        <Link className="btn btn-warning scoreboard-btn" to={scoreboardLink}>Scoreboard</Link>
+        <div className="homepage-buttons-div">
+          <Link className="btn btn-info my-activities-btn" to={myActivitiesLink}>My Activities</Link>
+          <Link className="btn btn-primary all-activities-btn" to={allActivitiesLink}>All Activities</Link>
+          <Link className="btn btn-warning scoreboard-btn" to={scoreboardLink}>Scoreboard</Link>
+        </div>
       </div>
     );
   }
