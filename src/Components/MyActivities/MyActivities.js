@@ -17,6 +17,12 @@ class MyActivities extends React.Component {
       .catch(err => console.error('no activities for you dude', err));
   }
 
+  deleteUserActivity = (userActivityId) => {
+    userActivitiesData.deleteUserActivity(userActivityId)
+      .then(() => this.getUserActivities())
+      .catch(err => console.error('unable to delete'));
+  }
+
   componentDidMount() {
     this.getUserActivities();
   }
@@ -27,6 +33,7 @@ class MyActivities extends React.Component {
       <UserActivityCard
         key={userActivity.id}
         userActivity={userActivity}
+        deleteUserActivity={this.deleteUserActivity}
         />
     ));
     return (

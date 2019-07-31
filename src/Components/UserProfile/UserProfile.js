@@ -1,6 +1,5 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
-import firebase from 'firebase/app';
 import 'firebase/auth';
 import {
   Button,
@@ -17,7 +16,7 @@ import usersData from '../../helpers/data/usersData';
 
 import './UserProfile.scss';
 
-const defaultState = {
+const defaultItem = {
   name: '',
   location: '',
   image: '',
@@ -28,18 +27,17 @@ class UserProfile extends React.Component {
     super(props);
     this.state = {
       modal: false,
-      newItem: defaultState,
-      user: {
-        image: '',
-        location: '',
-        name: '',
-      },
+      newItem: defaultItem,
     };
     this.toggle = this.toggle.bind(this);
   }
 
   static propTypes = {
     user: userShape.userProfileShape,
+  }
+
+  componentDidMount() {
+    this.setState({ newItem: this.props.user });
   }
 
   toggle() {
@@ -54,18 +52,19 @@ class UserProfile extends React.Component {
     this.setState({ newItem: tempItem });
   };
 
-  nameChange = e => this.addNewUserForm('usernameInput', e);
+  nameChange = e => this.addNewUserForm('name', e);
 
-  locationChange = e => this.addNewUserForm('locationInput', e);
+  locationChange = e => this.addNewUserForm('location', e);
 
-  imageChange = e => this.addNewUserForm('imageInput');
+  imageChange = e => this.addNewUserForm('image', e);
 
   formSubmit = (e) => {
     e.preventDefault();
     const userToSave = { ...this.state.newItem };
-    const userId = firebase.auth().currentUser.uid;
-    usersData.editUsersInfo(userId, userToSave)
+    const profileId = this.props.user.id;
+    usersData.editUsersInfo(profileId, userToSave)
       .then(() => {
+        this.props.getUserInfoByUserId();
         this.toggle();
       }).catch(err => console.error('no new user saved', err));
   }
@@ -76,6 +75,7 @@ class UserProfile extends React.Component {
       <div className="userProfile">
         <img className="user-profile-image" src={user.image} alt="face"></img>
         <h2 className="user-profile-name">{user.name}</h2>
+        <h3 className="user-profile-location">{user.location}</h3>
         <button className="btn btn-danger" onClick={this.toggle}>Edit Profile</button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Update Profile</ModalHeader>
@@ -88,7 +88,6 @@ class UserProfile extends React.Component {
                 id="usernameInput"
                 className="form-control"
                 aria-describedby="username"
-                placeholder="Full name"
                 defaultValue={user.name}
                 onChange={this.nameChange}
                 />
@@ -101,7 +100,6 @@ class UserProfile extends React.Component {
                 id="locationInput"
                 className="form-control"
                 aria-describedby="user location"
-                placeholder="Location"
                 defaultValue={user.location}
                 onChange={this.locationChange}
                 />
@@ -114,7 +112,6 @@ class UserProfile extends React.Component {
                 id="imageInput"
                 className="form-control"
                 aria-describedby="user image URL"
-                placeholder="https://www.google.com/bird.png"
                 defaultValue={user.image}
                 onChange={this.imageChange}
               />

@@ -15,13 +15,16 @@ class Home extends React.Component {
       name: '',
       uid: '',
       location: '',
+      id: '',
     },
   }
 
   getUserInfoByUserId = () => {
     const { uid } = firebase.auth().currentUser;
     usersData.getUserInfoByUserId(uid)
-      .then(userPromise => this.setState({ user: userPromise }))
+      .then((userPromise) => {
+        this.setState({ user: userPromise });
+      })
       .catch(err => console.error('cannot get user info', err));
   }
 
@@ -37,7 +40,7 @@ class Home extends React.Component {
 
     return (
       <div className="Home">
-        <UserProfile key={user.uid} user={user}/>
+        <UserProfile key={user.uid} user={user} getUserInfoByUserId={this.getUserInfoByUserId}/>
         <Link className="btn btn-info my-activities-btn" to={myActivitiesLink}>My Activities</Link>
         <Link className="btn btn-primary all-activities-btn" to={allActivitiesLink}>All Activities</Link>
         <Link className="btn btn-warning scoreboard-btn" to={scoreboardLink}>Scoreboard</Link>
