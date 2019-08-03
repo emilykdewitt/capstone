@@ -78,7 +78,7 @@ class EditUserActivityCard extends React.Component {
               <input
                 type="date"
                 id="activity-date"
-                value={newActivity.date}
+                value={newUserActivity.dateTime}
                 onChange={this.dateChange}
               >
               </input>
