@@ -73,9 +73,11 @@ class UserProfile extends React.Component {
     const { user } = this.props;
     return (
       <div className="userProfile">
-        <img className="user-profile-image" src={user.image} alt="face"></img>
-        <h2 className="user-profile-name">{user.name}</h2>
-        <h3 className="user-profile-location">{user.location}</h3>
+        <div className="image-name-location-div">
+          <img className="user-profile-image" src={user.image} alt="face"></img>
+          <h2 className="user-profile-name">{user.name}</h2>
+          <h5 className="user-profile-location">{user.location}</h5>
+        </div>
         <button className="btn btn-danger" onClick={this.toggle}>Edit Profile</button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Update Profile</ModalHeader>
