@@ -30,7 +30,6 @@ class AllUserActivities extends React.Component {
     ));
     return (
       <div className="all-activities-page">
-        {/* <h2>All User Activities</h2> */}
         { makeUserActivityCards }
       </div>
     );
