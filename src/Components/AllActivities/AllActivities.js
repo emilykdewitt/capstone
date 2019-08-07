@@ -21,8 +21,33 @@ class AllActivities extends React.Component {
     e.preventDefault();
     const searchTerm = e.target.value;
     const regex = new RegExp(searchTerm, 'gi');
+    const { activities } = this.state;
+    this.setState({ filteredActivities: activities });
     const filteredResults = this.state.filteredActivities.filter(activity => activity.name.match(regex));
+    if (regex !== '') {
+      this.setState({ filteredActivities: filteredResults });
+    } else if (regex === '/(?:)/gi') {
+      this.setState({ filteredActivities: activities });
+    }
+  }
+
+  filterByCategory = (e) => {
+    e.preventDefault();
+    const buttonCategory = e.target.id;
+    const regex = new RegExp(buttonCategory, 'gi');
+    const { activities } = this.state;
+    this.setState({ filteredActivities: activities });
+    console.error(this.state.filteredActivities);
+    const filteredResults = this.state.filteredActivities.filter(activity => activity.category.match(regex));
     this.setState({ filteredActivities: filteredResults });
+    console.error(this.state.filteredActivities);
+  }
+
+  showAll = (e) => {
+    document.getElementById('search-activity-input').value = '';
+    activitiesData.getActivities()
+      .then(activities => this.setState({ activities, filteredActivities: activities }))
+      .catch(err => console.error('unable to reset state', err));
   }
 
   componentDidMount() {
@@ -40,7 +65,16 @@ class AllActivities extends React.Component {
       <div className="all-activities-page">
         <h2>All Activities</h2>
         <h5>Search for Activity</h5>
-        <input placeholder="litter" onChange={this.filterActivities}></input>
+        <input id="search-activity-input" placeholder="litter" onChange={this.filterActivities}></input>
+        <div className="activity-buttons">
+          <button className="btn btn-danger" onClick={this.showAll}>Show All</button>
+          <button id="Household" className="btn btn-info" onClick={this.filterByCategory}>Household</button>
+          <button id="Community" className="btn btn-info" onClick={this.filterByCategory}>Community</button>
+          <button id="Transportation" className="btn btn-info" onClick={this.filterByCategory}>Transportation</button>
+          <button id="Food and Drink" className="btn btn-info" onClick={this.filterByCategory}>Food and Drink</button>
+          <button id="Shopping" className="btn btn-info" onClick={this.filterByCategory}>Shopping</button>
+
+        </div>
         <div className="activity-cards-container d-flex">
           { makeActivityCards }
         </div>
