@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import firebase from 'firebase/app';
 import 'firebase/auth';
+import './Auth.scss';
 
 class Auth extends React.Component {
   state = {
@@ -30,9 +31,9 @@ class Auth extends React.Component {
     return (
       <div className="Auth">
         <h1 className="loginAuth">GreenUp</h1>
-        <Link className="btn btn-info col-8" to={'/new-user'}>Create an Account!</Link>
+        <h4 className="taglineAuth">make your life a little greener</h4>
         <form className="col-10 col-lg-4 container sign-in-form" onSubmit={this.loginClickEvent}>
-          <h3 className="sign-in-header">Already Have An Account?</h3>
+          {/* <h3 className="sign-in-header">Already Have An Account?</h3> */}
           <div className="form-group">
               <label htmlFor="email">Email</label>
               <input
@@ -57,7 +58,8 @@ class Auth extends React.Component {
               required
               />
             </div>
-            <button className="btn btn-success">Log In</button>
+            <button className="btn loginBtn">Log In</button>
+            <Link className="btn col-8 createAccountBtn" to={'/new-user'}>Create an Account!</Link>
           </form>
       </div>
     );

@@ -83,6 +83,7 @@ class NewUser extends React.Component {
             id="password"
             value={password}
             onChange={this.handleChange}
+            placeholder="********"
             required
             />
           </div>
@@ -97,7 +98,9 @@ class NewUser extends React.Component {
             required
             />
           </div>
-          <button type="submit" className="new-user-btn btn btn-primary btn-lg">Join GreenUp</button>
+          <div className="form-group col-11 col-md-9 col-lg-7">
+            <button type="submit" className="new-user-btn btn btn-primary btn-lg">Join GreenUp</button>
+          </div>
         </form>
       </div>
     );

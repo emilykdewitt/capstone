@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink as RRNavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import './MyNavbar.scss';
 
 import firebase from 'firebase/app';
 import 'firebase/auth';
@@ -64,7 +65,7 @@ class MyNavbar extends React.Component {
     return (
       <div className="MyNavbar">
       <Navbar color="dark" dark expand="md">
-          <NavbarBrand href="/">GreenUp</NavbarBrand>
+          <NavbarBrand className="navbarBrand" href="/">GreenUp</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             {buildNavbar()}

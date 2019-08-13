@@ -3,6 +3,8 @@ import Moment from 'react-moment';
 import 'firebase/auth';
 import { Link } from 'react-router-dom';
 
+import './UserActivityCard.scss';
+
 import PropTypes from 'prop-types';
 import userActivityShape from '../../helpers/data/userActivityShape';
 
@@ -47,13 +49,30 @@ class UserActivityCard extends React.Component {
       <div className="user-activity-card">
         <div className="card user-activity-card">
           <div className="card-body">
-            <h5 className="card-title">{activity.name}</h5>
-            <h5 className="card-title">Date:
-              <Moment format="M/D/YYYY">{dateToFormat}</Moment>
-            </h5>
-            <h5 className="card-title">Notes: {userActivity.notes}</h5>
-            <Link className="btn btn-info" to={editLink}>Edit</Link>
-            <button className="btn btn-danger" onClick={this.deleteMe}>Delete</button>
+            <table className="table table-striped">
+              <tbody>
+                <tr>
+                  <td>Activity:</td>
+                  <td>{activity.name}</td>
+                </tr>
+                <tr>
+                  <td>Category:</td>
+                  <td>{activity.category}</td>
+                </tr>
+                <tr>
+                  <td>Date:</td>
+                  <td>
+                    <Moment format="M/D/YYYY">{dateToFormat}</Moment>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Notes:</td>
+                  <td>{userActivity.notes}</td>
+                </tr>
+              </tbody>
+            </table>
+            <Link className="btn btn-info editActivityBtn" to={editLink}>Edit</Link>
+            <button className="btn btn-danger deleteActivityBtn" onClick={this.deleteMe}>Delete</button>
           </div>
         </div>
       </div>

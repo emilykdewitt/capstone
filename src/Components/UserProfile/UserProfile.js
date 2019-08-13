@@ -78,7 +78,7 @@ class UserProfile extends React.Component {
           <h2 className="user-profile-name">{user.name}</h2>
           <h5 className="user-profile-location">{user.location}</h5>
         </div>
-        <button className="btn btn-danger" onClick={this.toggle}>Edit Profile</button>
+        <button className="btn btn-outline-info" onClick={this.toggle}>Edit Profile</button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Update Profile</ModalHeader>
           <ModalBody>

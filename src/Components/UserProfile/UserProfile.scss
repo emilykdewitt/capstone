@@ -1,6 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+
 .user-profile-image {
   margin-top: 3em;
   width: 40%;
   border-radius: 50%;
   box-shadow: 7px -7px 15px grey;
+}
+
+.btn-outline-info {
+  font-size: .75em;
+  padding: .175rem .55rem;
+}
+
+.user-profile-image, .user-profile-name, .user-profile-location {
+  font-family: 'Varela Round', sans-serif;
+  color: whitesmoke;
 }

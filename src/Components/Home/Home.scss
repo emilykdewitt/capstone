@@ -13,9 +13,25 @@
   margin: 10px;
 }
 
+a.btn:hover {
+  background-color: rgb(211, 184, 33)
+}
+
 .my-activities-btn, .all-activities-btn, .scoreboard-btn {
   width: 90%;
   margin: 10px;
+}
+
+.my-activities-btn {
+  background-color: #00A9A5;
+}
+
+.all-activities-btn {
+  background-color: #4E8098;
+}
+
+.scoreboard-btn {
+  background-color: #90C2E7;
 }
 
 @media only screen and (max-width: 600px) {

@@ -63,19 +63,19 @@ class AllActivities extends React.Component {
     ));
     return (
       <div className="all-activities-page">
-        <h2>All Activities</h2>
-        <h5>Search for Activity</h5>
+        <h2 className="pageTitle">All Activities</h2>
+        <label htmlFor="search-activity-input">Search for Activity</label>
         <input id="search-activity-input" placeholder="litter" onChange={this.filterActivities}></input>
         <div className="activity-buttons">
-          <button className="btn btn-danger" onClick={this.showAll}>Show All</button>
-          <button id="Household" className="btn btn-info" onClick={this.filterByCategory}>Household</button>
-          <button id="Community" className="btn btn-info" onClick={this.filterByCategory}>Community</button>
-          <button id="Transportation" className="btn btn-info" onClick={this.filterByCategory}>Transportation</button>
-          <button id="Food and Drink" className="btn btn-info" onClick={this.filterByCategory}>Food and Drink</button>
-          <button id="Shopping" className="btn btn-info" onClick={this.filterByCategory}>Shopping</button>
-
+          <h5>Categories:</h5>
+          <button id="Household" className="btn btn-info categoryBtn" onClick={this.filterByCategory}>Household</button>
+          <button id="Community" className="btn btn-info categoryBtn" onClick={this.filterByCategory}>Community</button>
+          <button id="Transportation" className="btn btn-info categoryBtn" onClick={this.filterByCategory}>Transportation</button>
+          <button id="Food and Drink" className="btn btn-info categoryBtn" onClick={this.filterByCategory}>Food and Drink</button>
+          <button id="Shopping" className="btn btn-info categoryBtn" onClick={this.filterByCategory}>Shopping</button>
+          <button className="btn btn-info categoryBtn showAllBtn" onClick={this.showAll}>Show All</button>
         </div>
-        <div className="activity-cards-container d-flex">
+        <div className="activity-cards-container d-flex align-items-stretch">
           { makeActivityCards }
         </div>
       </div>

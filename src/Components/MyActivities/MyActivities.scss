@@ -1,4 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+
 .user-act-cards-container {
   display: flex;
   flex-wrap: wrap;
+}
+
+.pageTitle {
+  margin-top: 15px;
+  font-family: 'Varela Round', sans-serif;
+  color: whitesmoke;
+}
+
+#go-to-all-activities {
+  width: 50%;
 }
