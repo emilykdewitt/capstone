@@ -62,10 +62,10 @@ class AddNewUserActivity extends React.Component {
     const allActivitiesLink = '/allactivities';
     return (
       <div className="NewUserActivity">
-        <h1>New User Activity</h1>
+        <h1 className="add-activity-page-title">Add New Activity</h1>
         <h4>Activity: {newActivity.name}</h4>
         <h4>Points: {newActivity.points}</h4>
-        <form onSubmit={this.formSubmit}>
+        <form className="new-activity-form" onSubmit={this.formSubmit}>
           <div className="form-group">
             <label htmlFor="dateTime">Date activity was completed:</label>
             <input
@@ -88,7 +88,7 @@ class AddNewUserActivity extends React.Component {
               onChange={this.notesChange}
             />
           </div>
-          <button type="submit" className="btn btn-primary">Save New User Activity</button>
+          <button type="submit" className="btn btn-primary">Save New Activity</button>
           <Link className="btn btn-danger" to={allActivitiesLink}>Cancel</Link>
 
         </form>
