@@ -35,7 +35,7 @@ class Auth extends React.Component {
         <form className="col-10 col-lg-4 container sign-in-form" onSubmit={this.loginClickEvent}>
           {/* <h3 className="sign-in-header">Already Have An Account?</h3> */}
           <div className="form-group">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email" className="authFormLabels">Email</label>
               <input
               type="email"
               className="form-control"
@@ -47,7 +47,7 @@ class Auth extends React.Component {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password" className="authFormLabels">Password</label>
               <input
               type="password"
               className="form-control"

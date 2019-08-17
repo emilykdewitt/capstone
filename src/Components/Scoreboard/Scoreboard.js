@@ -6,6 +6,8 @@ import userActivitiesData from '../../helpers/data/userActivitiesData';
 
 import AllUserActivities from '../AllUserActivities/AllUserActivities';
 
+import './Scoreboard.scss';
+
 class Scoreboard extends React.Component {
   state = {
     userActivities: '',
@@ -45,7 +47,7 @@ class Scoreboard extends React.Component {
     } = this.state;
     return (
       <div className="Scoreboard">
-        <h2>Scoreboard</h2>
+        <h2 className="scoreboardLabel">Scoreboard</h2>
         <AllUserActivities
           users={users}
           activities={activities}

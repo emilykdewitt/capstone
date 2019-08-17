@@ -88,8 +88,8 @@ class AddNewUserActivity extends React.Component {
               onChange={this.notesChange}
             />
           </div>
-          <button type="submit" className="btn btn-primary">Save New Activity</button>
-          <Link className="btn btn-danger" to={allActivitiesLink}>Cancel</Link>
+          <button type="submit" className="btn saveAddNewActivity">Save New Activity</button>
+          <Link className="cancelAddNewActivity btn" to={allActivitiesLink}>Cancel</Link>
 
         </form>
       </div>
