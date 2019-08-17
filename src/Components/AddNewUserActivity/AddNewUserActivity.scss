@@ -2,6 +2,8 @@
 
 .NewUserActivity {
   color: whitesmoke;
+  align-items: center;
+  justify-content: center;
 }
 
 .add-activity-page-title {
@@ -9,7 +11,17 @@
 }
 
 .new-activity-form {
-  width: 50%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.cancelAddNewActivity {
+  background-color: rgb(153, 151, 151);
+  margin-top: 10px;
+}
+
+.saveAddNewActivity {
+  background-color: #00A9A5;
 }

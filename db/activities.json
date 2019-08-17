@@ -37,7 +37,7 @@
   },
   "activity07": {
     "id": "activity07",
-    "name": "One day without eating meat",
+    "name": "Went one day without eating meat",
     "category": "Food and Drink",
     "points": 3
   },
@@ -49,14 +49,194 @@
   },
   "activity09": {
     "id": "activity09",
-    "name": "Create a meal plan for the week to avoid food waste",
+    "name": "Created a meal plan for the week to avoid food waste",
     "category": "Food and Drink",
     "points": 5
   },
   "activity10": {
     "id": "activity10",
-    "name": "Buy an item that you intend to keep for life",
+    "name": "Bought an item that you intend to keep for life",
     "category": "Shopping",
     "points": 15
+  },
+  "activity11": {
+    "id": "activity11",
+    "name": "Bought sustainably-made or fair trade clothing or accessory",
+    "category": "Shopping",
+    "points": 5
+  },
+  "activity12": {
+    "id": "activity12",
+    "name": "Repaired an item of clothing, shoes, or accessory instead of throwing away",
+    "category": "Shopping",
+    "points": 5
+  },
+  "activity13": {
+    "id": "activity13",
+    "name": "Turned off all lights in home before leaving",
+    "category": "Household",
+    "points": 2
+  },
+  "activity14": {
+    "id": "activity14",
+    "name": "Replaced light bulb with compact fluorescent bulb",
+    "category": "Household",
+    "points": 3
+  },
+  "activity15": {
+    "id": "activity15",
+    "name": "Adjusted my thermostat to reduce energy usage",
+    "category": "Household",
+    "points": 3
+  },
+  "activity16": {
+    "id": "activity16",
+    "name": "Took wire hangers back to dry cleaner instead of throwing away",
+    "category": "Shopping",
+    "points": 4
+  },
+  "activity17": {
+    "id": "activity17",
+    "name": "Switched all bills to online bill pay",
+    "category": "Household",
+    "points": 5
+  },
+  "activity18": {
+    "id": "activity18",
+    "name": "Donated or sold used clothing items, shoes, or accessories",
+    "category": "Household",
+    "points": 3
+  },
+  "activity19": {
+    "id": "activity19",
+    "name": "Bought certified biodegradable poop bags for your dog",
+    "category": "Household",
+    "points": 4
+  },
+  "activity20": {
+    "id": "activity20",
+    "name": "Bought produce from a local farmer",
+    "category": "Food and Drink",
+    "points": 3
+  },
+  "activity21": {
+    "id": "activity21",
+    "name": "Washed laundry on cold instead of hot",
+    "category": "Household",
+    "points": 2
+  },
+  "activity22": {
+    "id": "activity22",
+    "name": "Bought a plant for your home to naturally purify air",
+    "category": "Household",
+    "points": 4
+  },
+  "activity23": {
+    "id": "activity24",
+    "name": "Used optoutprescreen.com to opt out of mailed credit card offers",
+    "category": "Household",
+    "points": 6
+  },
+  "activity24": {
+    "id": "activity24",
+    "name": "Ate at a restaurant that uses local ingredients or supports local farmers",
+    "category": "Food and Drink",
+    "points": 2
+  },
+  "activity25": {
+    "id": "activity25",
+    "name": "Brought my own container to take home leftovers",
+    "category": "Food and Drink",
+    "points": 3
+  },
+  "activity26": {
+    "id": "activity26",
+    "name": "Took trip to recycling center with items that can't be curb-side recycled",
+    "category": "Household",
+    "points": 4
+  },
+  "activity27": {
+    "id": "activity27",
+    "name": "Bought food in bulk instead of pre-packaged",
+    "category": "Food and Drink",
+    "points": 3
+  },
+  "activity28": {
+    "id": "activity28",
+    "name": "Got a library card",
+    "category": "Community",
+    "points": 4
+  },
+  "activity29": {
+    "id": "activity29",
+    "name": "Checked out a book at the library",
+    "category": "Community",
+    "points": 3
+  },
+  "activity30": {
+    "id": "activity30",
+    "name": "Bought bar soap to replace liquid soap",
+    "category": "Shopping",
+    "points": 3
+  },
+  "activity31": {
+    "id": "activity31",
+    "name": "Replaced plastic razor and cartridges with safety razor and blades",
+    "category": "Shopping",
+    "points": 3
+  },
+  "activity32": {
+    "id": "activity32",
+    "name": "Took public transportation for a day",
+    "category": "Transportation",
+    "points": 4
+  },
+  "activity33": {
+    "id": "activity33",
+    "name": "Planted a bee, butterfly, or bird friendly plant",
+    "category": "Community",
+    "points": 8
+  },
+  "activity34": {
+    "id": "activity34",
+    "name": "Bought or make a compost bin for your household",
+    "category": "Household",
+    "points": 15
+  },
+  "activity35": {
+    "id": "activity35",
+    "name": "Bought a gift from a local vendor instead of buying online",
+    "category": "Shopping",
+    "points": 3
+  },
+  "activity36": {
+    "id": "activity36",
+    "name": "Researched local and national politicians stance on environmental issues before voting",
+    "category": "Community",
+    "points": 8
+  },
+  "activity37": {
+    "id": "activity37",
+    "name": "Installed a half-flush in a toilet at home",
+    "category": "Household",
+    "points": 15
+  },
+  "activity38": {
+    "id": "activity38",
+    "name": "Bought a bulk-sized container instead of normal size (and didn't waste it)",
+    "category": "Shopping",
+    "points": 5
+  },
+  "activity39": {
+    "id": "activity39",
+    "name": "Chose email or text receipt",
+    "category": "Shopping",
+    "points": 1
+  },
+  "activity40": {
+    "id": "activity40",
+    "name": "Try a pack of tree-free toilet paper (bamboo, sugar cane, etc.)",
+    "category": "Shopping",
+    "points": 2
   }
 }

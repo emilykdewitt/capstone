@@ -52,7 +52,7 @@ class NewUser extends React.Component {
         <h1 className="join-header">Join GreenUp!</h1>
         <form className="row justify-content-center new-user-form" onSubmit={this.formSubmit}>
           <div className="form-group col-11 col-md-9 col-lg-7">
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name" className="newUserFormLabel">Name</label>
             <input
             type="text"
             className="form-control"
@@ -64,7 +64,7 @@ class NewUser extends React.Component {
             />
           </div>
           <div className="form-group col-11 col-md-9 col-lg-7">
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email" className="newUserFormLabel">Email</label>
             <input
             type="email"
             className="form-control"
@@ -76,7 +76,7 @@ class NewUser extends React.Component {
             />
           </div>
           <div className="form-group col-11 col-md-9 col-lg-7">
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password" className="newUserFormLabel">Password</label>
             <input
             type="password"
             className="form-control"
@@ -88,7 +88,7 @@ class NewUser extends React.Component {
             />
           </div>
           <div className="form-group col-11 col-md-9 col-lg-7">
-            <label htmlFor="image">Profile Photo URL</label>
+            <label htmlFor="image" className="newUserFormLabel">Profile Photo URL</label>
             <input
             type="text"
             className="form-control"

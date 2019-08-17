@@ -37,10 +37,8 @@ class AllActivities extends React.Component {
     const regex = new RegExp(buttonCategory, 'gi');
     const { activities } = this.state;
     this.setState({ filteredActivities: activities });
-    console.error(this.state.filteredActivities);
     const filteredResults = this.state.filteredActivities.filter(activity => activity.category.match(regex));
     this.setState({ filteredActivities: filteredResults });
-    console.error(this.state.filteredActivities);
   }
 
   showAll = (e) => {
@@ -64,10 +62,10 @@ class AllActivities extends React.Component {
     return (
       <div className="all-activities-page">
         <h2 className="pageTitle">All Activities</h2>
-        <label htmlFor="search-activity-input">Search for Activity</label>
+        <label className="searchBoxLabel" htmlFor="search-activity-input">Search for Activity</label>
         <input id="search-activity-input" placeholder="litter" onChange={this.filterActivities}></input>
         <div className="activity-buttons">
-          <h5>Categories:</h5>
+          <h5 className="filterByCategoryLabel">Filter by Category:</h5>
           <button id="Household" className="btn btn-info categoryBtn" onClick={this.filterByCategory}>Household</button>
           <button id="Community" className="btn btn-info categoryBtn" onClick={this.filterByCategory}>Community</button>
           <button id="Transportation" className="btn btn-info categoryBtn" onClick={this.filterByCategory}>Transportation</button>

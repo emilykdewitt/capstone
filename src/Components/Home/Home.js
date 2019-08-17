@@ -17,6 +17,7 @@ class Home extends React.Component {
       location: '',
       id: '',
     },
+    userActivities: [],
   }
 
   getUserInfoByUserId = () => {
@@ -27,6 +28,15 @@ class Home extends React.Component {
       })
       .catch(err => console.error('cannot get user info', err));
   }
+
+  // getUserActivities = () => {
+  //   const { uid } = firebase.auth().currentUser;
+  //   userActivitiesData.getUserActivities(uid)
+  //     .then((userActivitiesPromise) => {
+  //       this.setState({ userActivities: userActivitiesPromise });
+  //     })
+  //     .catch(err => console.error('cannot get user activities info', err));
+  // }
 
   componentDidMount() {
     this.getUserInfoByUserId();
@@ -41,10 +51,17 @@ class Home extends React.Component {
     return (
       <div className="Home">
         <UserProfile key={user.uid} user={user} getUserInfoByUserId={this.getUserInfoByUserId}/>
-        <div className="homepage-buttons-div">
-          <Link className="btn my-activities-btn" to={myActivitiesLink}>My Activities</Link>
-          <Link className="btn all-activities-btn" to={allActivitiesLink}>All Activities</Link>
-          <Link className="btn scoreboard-btn" to={scoreboardLink}>Scoreboard</Link>
+        <div className="my-scores-and-buttons">
+          <div className="my-scores">
+            <h5>Points this week: 27</h5>
+            <h5>Points last week: 23</h5>
+            <h5>Total points: 128</h5>
+          </div>
+          <div className="homepage-buttons-div">
+            <Link className="btn my-activities-btn" to={myActivitiesLink}>My Activities</Link>
+            <Link className="btn all-activities-btn" to={allActivitiesLink}>All Activities</Link>
+            <Link className="btn scoreboard-btn" to={scoreboardLink}>Scoreboard</Link>
+          </div>
         </div>
       </div>
     );
