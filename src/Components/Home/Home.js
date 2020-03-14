@@ -58,7 +58,7 @@ class Home extends React.Component {
             <h5>Total points: 128</h5>
           </div>
           <div className="homepage-buttons-div">
-            <Link className="btn my-activities-btn" to={myActivitiesLink}>My Activities</Link>
+            <Link className="btn my-activities-btn" to={myActivitiesLink}>My Activities!</Link>
             <Link className="btn all-activities-btn" to={allActivitiesLink}>All Activities</Link>
             <Link className="btn scoreboard-btn" to={scoreboardLink}>Scoreboard</Link>
           </div>
